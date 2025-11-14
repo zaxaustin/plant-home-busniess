@@ -9,6 +9,7 @@ const Header: React.FC = () => {
     { href: '#plants', label: 'Plants' },
     { href: '#recommender', label: 'AI Helper' },
     { href: '#pricing', label: 'Pricing' },
+    { href: '#tech-blueprint', label: 'Tech Blueprint' },
     { href: '#contact', label: 'Contact' },
   ];
 

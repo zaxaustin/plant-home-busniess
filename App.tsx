@@ -7,6 +7,7 @@ import PlantCatalogue from './components/PlantCatalogue';
 import PricingSection from './components/PricingSection';
 import GeminiRecommender from './components/GeminiRecommender';
 import Footer from './components/Footer';
+import TechnicalBlueprint from './components/TechnicalBlueprint';
 
 const App: React.FC = () => {
   return (
@@ -18,6 +19,7 @@ const App: React.FC = () => {
         <PlantCatalogue />
         <GeminiRecommender />
         <PricingSection />
+        <TechnicalBlueprint />
       </main>
       <Footer />
     </div>
