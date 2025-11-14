@@ -9,6 +9,7 @@ const Header: React.FC = () => {
     { href: '#plants', label: 'Plants' },
     { href: '#recommender', label: 'AI Helper' },
     { href: '#pricing', label: 'Pricing' },
+    { href: '#blog', label: 'Blog' },
     { href: '#tech-blueprint', label: 'Tech Blueprint' },
     { href: '#contact', label: 'Contact' },
   ];
@@ -20,13 +21,18 @@ const Header: React.FC = () => {
           <svg className="w-8 h-8 mr-2 text-brand-tan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
           Urban Canopy NYC
         </a>
-        <nav className="hidden md:flex space-x-8">
-          {navLinks.map((link) => (
-            <a key={link.href} href={link.href} className="text-brand-beige hover:text-brand-tan transition-colors duration-300">
-              {link.label}
-            </a>
-          ))}
-        </nav>
+        <div className="hidden md:flex items-center">
+          <nav className="flex space-x-8">
+            {navLinks.map((link) => (
+              <a key={link.href} href={link.href} className="text-brand-beige hover:text-brand-tan transition-colors duration-300">
+                {link.label}
+              </a>
+            ))}
+          </nav>
+          <a href="#" className="ml-8 bg-brand-tan hover:bg-brand-orange text-brand-green font-bold py-2 px-4 rounded-full text-sm transition-transform duration-300 transform hover:scale-105">
+            Login
+          </a>
+        </div>
         <div className="md:hidden">
           <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-brand-beige focus:outline-none">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -45,6 +51,11 @@ const Header: React.FC = () => {
                 </a>
               </li>
             ))}
+            <li>
+              <a href="#" onClick={() => setIsMenuOpen(false)} className="mt-2 bg-brand-tan hover:bg-brand-orange text-brand-green font-bold py-2 px-4 rounded-full text-sm">
+                Login
+              </a>
+            </li>
           </ul>
         </nav>
       )}
